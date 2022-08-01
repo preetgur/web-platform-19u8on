@@ -1,0 +1,45 @@
+.clip {
+  padding: 10px;
+  margin-bottom: 50px;
+  position: relative;
+  width: 100px;
+  /* height: 50px; */
+  background-color: pink;
+}
+
+.clip:before,
+.clip:after {
+  content: '';
+  width: 118%;
+  height: 50px;
+  box-shadow: inset 0 0 0 2px #f7df1c;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  animation: clipme 3s linear infinite;
+}
+
+.clip:before {
+  animation-delay: -1.5s;
+}
+@keyframes clipme {
+  0%,
+  100% {
+    clip-path: rect(0px, 100px, 2px, 0px);
+
+    border-color: violet;
+  }
+  25% {
+    border-color: green;
+
+    clip: rect(0px, 2px, 35px, 0);
+  }
+  50% {
+    border-color: yellow;
+    clip: rect(50px, 100px, -10px, 10px);
+  }
+  75% {
+    border-color: blue;
+    clip-path: rect(0px, 100px, 10px, 50px);
+  }
+}

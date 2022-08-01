@@ -1,0 +1,68 @@
+.section_third {
+ 
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 0;
+  
+}
+
+.section_third button{
+  background-color: rgb(128, 39, 81);
+  width: 100px;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  width: inherit;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+li {
+  padding: 10px;
+  width: inherit;
+  text-align: center;
+  background-color: rgb(228, 19, 116);
+  color: #ffff;
+  display: block;
+  opacity: 0;
+  transition: color 0.5s;
+  border-bottom: 1px solid white;
+}
+
+.section_third:hover ul {
+  display: block;
+}
+
+.section_third:hover ul li{
+  /* display: block; */
+  animation: animation .5s forwards;
+}
+
+@keyframes animation{
+  from{
+    opacity: 0;
+    transform: translate(50px);
+
+  }
+  to{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.section_third:hover li:nth-child(2){
+   animation-delay: .5s;
+}
+.section_third:hover li:nth-child(3){
+  animation-delay: .7s;
+}
+
+.section_third:hover li:nth-child(4){
+  animation-delay: .9s;
+
+}

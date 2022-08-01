@@ -1,0 +1,82 @@
+.btn::before {
+  content: 'Register';
+  background: rgb(224, 44, 74);
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  width: 100px;
+}
+
+.btn:active::before {
+  content: 'Login';
+  width: 100px;
+
+  display: block;
+  /* animation: animation_btn .5s forwards; */
+}
+
+.btn {
+  /* border: none; */
+  display: none;
+  background: none;
+}
+
+@keyframes animation_btn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  Learn more */
+
+.learn {
+  margin: 10px;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  /* outline: 1px solid black; */
+  border-radius: 1px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;
+}
+
+.learn::before {
+  content: ' ';
+  transform: skew(35deg);
+  background-color: black;
+  width: 0;
+  height: 100%;
+  display: block;
+  background: white;
+  z-index: -1;
+  transition: width 1s;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.learn:hover::before {
+  width: 150%;
+}
+.learn:hover {
+  color: blueviolet;
+  transition: color 1s;
+  outline: 1px solid black;
+}
